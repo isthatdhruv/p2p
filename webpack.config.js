@@ -1,28 +1,35 @@
-// my-p2p-messenger/webpack.config.js
 const path = require('path');
 
 module.exports = {
-  entry: './src/App.jsx', // Entry point: your main React file
+  entry: './src/App.jsx',
   output: {
-    path: path.resolve(__dirname, 'dist'), // Output directory: the 'dist' folder
-    filename: 'app.js', // Output filename: 'app.js'
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'app.js',
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/, // Process .js and .jsx files
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader', // Use babel-loader to transpile code
+          loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'], // Presets for React and ES6+
+            presets: ['@babel/preset-env', '@babel/preset-react'],
           },
         },
       },
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'], // Resolve .js and .jsx extensions
+    extensions: ['.js', '.jsx'],
+    fallback: {
+      "util": require.resolve("util/"),
+      "stream": require.resolve("stream-browserify"),
+      "buffer": require.resolve("buffer")
+    }
   },
-  mode: 'development', // Set mode to 'development' for now
+  experiments: {
+    topLevelAwait: true,
+  },
+  mode: 'development',
 };

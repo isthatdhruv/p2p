@@ -1,0 +1,118 @@
+/* my-p2p-messenger/dist/styles.css */
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa; /* Light gray background */
+  flex-direction: column; /* Align items vertically */
+  gap: 10px; /* Spacing between elements */
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 650px;
+  max-width: 800px;
+  text-align: center; /* Center text within the container */
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.chat-input {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.chat-input input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem 0 0 0.25rem;
+  margin-right: 10px; /* Add space between input and button */
+}
+
+.chat-input button {
+  background-color: #007bff; /* Blue button */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 0 0.25rem 0.25rem 0;
+  cursor: pointer;
+}
+
+.file-input {
+  margin-bottom: 20px;
+  display: flex; /* Align file input elements horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 10px; /* Spacing between elements */
+}
+
+.file-input input[type="file"] {
+  display: none;
+}
+
+.file-input label {
+  background-color: #007bff; /* Blue button */
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.messages {
+  list-style: none;
+  padding: 0;
+  height: 400px; /* Increased height */
+  overflow-y: auto;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  width : 600px;
+}
+
+.messages li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  text-align: left; /* Align messages to the left */
+}
+
+.messages .sender {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.messages .you {
+  color: #007bff; /* Blue for your messages */
+}
+
+.messages .other {
+  color: #28a745; /* Green for other user's messages */
+}
+
+.messages .message-text {
+  flex-grow: 1;
+  word-break: break-word; /* Break long words */
+}
+
+/* Style for the "Open" link */
+.messages a {
+  color: #007bff; /* Blue link color */
+  margin-left: 10px; /* Add some space to the left */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Style for the recipient selection dropdown */
+.container select {
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  margin-bottom: 20px;
+}
